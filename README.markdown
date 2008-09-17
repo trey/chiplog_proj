@@ -1,0 +1,1 @@
+A Django project to run [Chiplog](http://github.com/trey/chiplog/).
