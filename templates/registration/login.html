@@ -1,0 +1,88 @@
+{# Based on sample template from: http://docs.djangoproject.com/en/dev/topics/auth/#django.contrib.auth.views.login #}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Log in to continue</title>
+	<style type="text/css" media="screen">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font: 14px Helvetica, sans-serif;
+			color: #ccc;
+			background: #333;
+		}
+		label {
+			text-transform: uppercase;
+			padding-right: 20px;
+		}
+		#wrapper {
+			margin: 150px auto 0;
+			padding: 20px;
+			width: 300px;
+			border: 3px solid #292929;
+			background: #444;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+		}
+		h1 {
+			padding-bottom: 20px;
+			text-align: center;
+			color: #222;
+		}
+		table {
+			padding-bottom: 20px;
+		}
+		input {
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			width: 190px;
+		}
+		input[type=submit] {
+			width: 100%;
+			height: 25px;
+			color: #ccc;
+			background: #333;
+			border: 2px solid #555;
+			text-transform: uppercase;
+		}
+		p {
+			margin: 0 0 20px;
+			padding: 10px;
+			color: yellow;
+			background: #333;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+		}
+		td {
+			padding: 3px 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+
+		{% block content %}
+
+		<h1>Log in to Continue</h1>
+		{% if form.errors %}
+		<p>Your username and password didn't match. Please try again.</p>
+		{% endif %}
+
+		<form method="post" action=".">
+		<table>
+		<tr><td>{{ form.username.label_tag }}</td><td>{{ form.username }}</td></tr>
+		<tr><td>{{ form.password.label_tag }}</td><td>{{ form.password }}</td></tr>
+		</table>
+
+		<input type="submit" value="login" />
+		<input type="hidden" name="next" value="{{ next }}" />
+		</form>
+
+		{% endblock %}
+
+	</div><!-- #wrapper -->
+</body>
+</html>

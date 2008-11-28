@@ -6,6 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^chiplog/', include('chiplog.urls')),
+    (r'^accounts/login/$', 'django.contrib.auth.views.login'),
 
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/(.*)', admin.site.root),
