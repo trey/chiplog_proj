@@ -1,0 +1,3 @@
+[submodule "chiplog"]
+	path = chiplog
+	url = git://github.com/trey/chiplog.git
