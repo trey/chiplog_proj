@@ -87,6 +87,8 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
 )
 
+CHIPLOG_MEDIA_URL = MEDIA_URL + 'chiplog/'
+
 FORCE_LOWERCASE_TAGS = True
 
 SESSION_COOKIE_NAME = 'chiplog'
