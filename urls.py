@@ -1,15 +1,14 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
-
-admin.autodiscover()
+from admin import site
 
 urlpatterns = patterns('',
     (r'^chiplog/', include('chiplog.urls')),
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
 
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    (r'^admin/(.*)', admin.site.root),
+    (r'^admin/(.*)', site.root),
 )
 
 # This allows Django to serve static files when you're developing your project.

@@ -1,8 +1,10 @@
 from django.contrib import admin
+from chiplog.models import Entry
 from chiplog.admin import EntryAdmin
-from chiplog.model import Entry
 
 class AdminSite(admin.AdminSite):
     pass
 
 site = AdminSite()
+
+site.register(Entry, EntryAdmin)
