@@ -76,6 +76,7 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     'chiplog',
     'tagging',
+    'typogrify',
     'django.contrib.redirects',
     'django.contrib.admin',
     'django.contrib.admindocs',
