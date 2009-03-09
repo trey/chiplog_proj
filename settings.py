@@ -52,6 +52,11 @@ TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), "templates"),
 )
 
+CHIPLOG_MEDIA_URL = MEDIA_URL + 'chiplog/'
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'chiplog.context_processors.chiplog_media_url',
+)
+
 INSTALLED_APPS = (
     'chiplog',
     'tagging',
@@ -66,8 +71,6 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'django.contrib.humanize',
 )
-
-CHIPLOG_MEDIA_URL = MEDIA_URL + 'chiplog/'
 
 FORCE_LOWERCASE_TAGS = True
 
