@@ -1,0 +1,5 @@
+docutils==0.6
+django-tagging
+-e git://github.com/mintchaos/typogrify.git#egg=Typogrify
+markdown
+smartypants
