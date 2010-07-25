@@ -55,13 +55,14 @@ TEMPLATE_DIRS = (
 CHIPLOG_MEDIA_URL = MEDIA_URL + 'chiplog/'
 TEMPLATE_CONTEXT_PROCESSORS = (
     'chiplog.context_processors.chiplog_media_url',
+    'django.contrib.auth.context_processors.auth',
 )
 
 INSTALLED_APPS = (
     'chiplog',
     'tagging',
     'typogrify',
-    'django.contrib.redirects',
+    # 'django.contrib.redirects',
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.auth',
